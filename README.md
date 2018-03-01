@@ -1,14 +1,15 @@
-# boilerplate
+# VueJS boiler plate
 
-> VueJS 2018 boiler plate
+> 2018 - template application
 
 **WORK STILL IN PROGRESS**
 
 Need to be done:
 
 - Store configuration
-- Validation
-- CLean up code
+- Implement default form validation
+- Configure relative path for imports
+- Clean up code
 
 This project is a boiler plate of Webpack, VueJS and VueX
 with unit test, e2e tests and linter configured
