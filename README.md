@@ -7,9 +7,6 @@
 Need to be done:
 
 - Store configuration
-- Implement default form validation
-- Configure relative path for imports
-- Clean up code
 
 This project is a boiler plate of Webpack, VueJS and VueX
 with unit test, e2e tests and linter configured
