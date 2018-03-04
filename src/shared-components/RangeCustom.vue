@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="RangeCustom__Wrapper">
+    coucou
     <input
       v-model="myval"
       :max="max"
@@ -12,9 +13,9 @@
   </div>
 </template>
 
-<script type="text/babel">
+<script>
   export default {
-    name: 'RangeCustom'
+    name: 'RangeCustom',
     props: {
       max: {
         type: Number,
@@ -29,7 +30,7 @@
         default: 4
       }
     },
-    data() {
+    data () {
       return {
         myval: this.defaultValue + 0
       }

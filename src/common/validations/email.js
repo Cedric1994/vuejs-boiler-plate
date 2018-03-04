@@ -1,3 +1,6 @@
+// This validator is an exemple but not usefull as we already
+// have VeeValidate for emails
+
 export const email = (val) => {
   if (!val) {
     return false

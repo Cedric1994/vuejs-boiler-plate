@@ -1,4 +1,4 @@
-import { cnpjNumber } from '../common/validations/social'
+import { cnpjNumber } from 'common/validations/social'
 
 const messages = {
   required: () => 'Este campo é obrigatório',
@@ -18,7 +18,8 @@ const dictionary = {
 }
 
 export default (Validator) => {
-  // Exemplo de como usar um validator customizado
+  // Simple exemple of adding a new validator to VeeValidate
+  // The exemple is in Spanish
   Validator.extend('cnpj', cnpjNumber)
   Validator.localize(dictionary)
 }

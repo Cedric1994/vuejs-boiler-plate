@@ -1,6 +1,6 @@
-import { vCNPJ } from '../common/directives/masks'
+import { vCNPJ } from 'common/directives/masks'
 
 export default (Vue) => {
-  // Exemplo de como usar uma diretiva em Vue
+  // Simple exemple of a directive
   Vue.directive('cnpj', vCNPJ)
 }

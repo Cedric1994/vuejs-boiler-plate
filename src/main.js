@@ -6,7 +6,7 @@ import VueRouter from 'vue-router'
 import { Validator } from 'vee-validate'
 import { sync } from 'vuex-router-sync'
 
-// Importação de código de configuração/criação criados.
+// Import the configuration of your application vue
 import plugins from './config/plugins'
 import directives from './config/directives'
 import validations from './config/validations'
@@ -14,19 +14,20 @@ import theme from './config/theme'
 import configRouter from './config/router'
 import vuexStore from './vuex/store'
 
-plugins(Vue, Vuex, VueRouter)
-directives(Vue)
+plugins(Vue, Vuex, VueRouter) // Declare the plugin we want to use
+directives(Vue) // Rehister all the directive
 theme(Vue)
+
+// Directive to automatically validate imports
+// More details: http://vee-validate.logaretm.com/
 validations(Validator)
 
 const store = new Vuex.Store(vuexStore)
 const router = configRouter(VueRouter)
 
-// Sincronização entre rotas e vuex.
-// Garante o estado da store em todas as páginas SPA.
+// Syncronize the router and the store of VueX
 sync(store, router)
 
-// Importando o componente raíz onde a app será renderizada.
 import App from './App' // eslint-disable-line
 
 new Vue({ // eslint-disable-line no-new
