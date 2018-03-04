@@ -1,6 +1,5 @@
 <template lang="html">
   <div class="RangeCustom__Wrapper">
-    coucou
     <input
       v-model="myval"
       :max="max"
@@ -8,7 +7,7 @@
       type="range"
       step="1"/>
     <span>
-      Current value is:
+      Current value is: {{myval}}
     </span>
   </div>
 </template>

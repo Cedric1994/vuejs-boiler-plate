@@ -3,15 +3,17 @@
     img(src='../assets/img/logo.png' alt='People')
     p=("Welcome to VueJS")
     p=("Are you ready to be amazed ?")
-    //- range-custom
+    range-custom
 </template>
 
 <script type="text/javascript">
-  import 'shared/RangeCustom'
+  import RangeCustom from 'shared/RangeCustom'
   // This is only a placeholder, this page doesn't need a script
   export default {
     data () {},
-    components: {},
+    components: {
+      RangeCustom
+    },
     computed: {},
     methods: {}
   }
