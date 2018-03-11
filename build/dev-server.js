@@ -35,15 +35,15 @@ const hotMiddleware = require('webpack-hot-middleware')(compiler, {
   log: false,
   heartbeat: 2000
 })
-// force page reload when html-webpack-plugin template changes (index.html)
-// This could cause issues, but haven't had any problem on my side:
+// Force page reload when html-webpack-plugin template changes (index.html)
+// Make hot reload slow with webpack 4 + conflict with chuck (wait and see)
 // https://github.com/jantimon/html-webpack-plugin/issues/680
-compiler.plugin('compilation', function (compilation) {
-  compilation.plugin('html-webpack-plugin-after-emit', function (data, cb) {
-    hotMiddleware.publish({ action: 'reload' })
-    cb()
-  })
-})
+// compiler.plugin('compilation', function (compilation) {
+//   compilation.plugin('html-webpack-plugin-after-emit', function (data, cb) {
+//     hotMiddleware.publish({ action: 'reload' })
+//     cb()
+//   })
+// })
 
 // enable hot-reload and state-preserving
 // compilation error display

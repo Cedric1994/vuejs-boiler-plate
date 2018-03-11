@@ -1,12 +1,12 @@
 // A variável abaixo contem a raíz da API em questão. Os endpoints serão criados depois.
-const basePath = 'https://api.github.com/repositories/11730342/commits?per_page=5&sha=';
+const basePath = 'https://api.github.com/repositories/11730342/commits?per_page=5&sha='
 
 // Actions são ações que o resource terá.
 // No exemplo abaixo, criamos uma ação 'list', que é um GET
 // na url que aponta para a raíz da API
 const gitActions = {
   list: { method: 'GET', url: `${basePath}` }
-};
+}
 
 // Exportamos então o recurso, que não passa de uma função que recebe um
 // Vue.$resource como parâmetro e retorna um resource customizado.

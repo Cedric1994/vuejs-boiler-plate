@@ -11,7 +11,7 @@ const webpack = require('webpack')
 const config = require('../config')
 const webpackConfig = require('./webpack.prod.conf')
 
-// Ora is an animated loader to display text in the cosole at loading
+// Ora is an animated loader to display text in the console at loading
 const spinner = ora('building for production...')
 spinner.start()
 

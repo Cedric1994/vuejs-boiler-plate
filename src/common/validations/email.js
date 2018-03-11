@@ -10,4 +10,4 @@ export const email = (val) => {
     regemail = /^(([^<>()[\].,;:\s@"]+(.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i
   return rfcemail.test(val) && regemail.test(val)
   /* eslint-enable max-len */
-};
+}

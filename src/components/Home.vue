@@ -2,7 +2,6 @@
   .welcome-page
     img(src='../assets/img/logo.png' alt='People')
     p=("Welcome to VueJS")
-    p=("Are you ready to be amazed ?")
     range-custom
 </template>
 

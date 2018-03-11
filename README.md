@@ -1,4 +1,4 @@
-# VueJS boiler plate
+# Berry - Seed for VueJS
 
 > 2018 - template application
 
@@ -8,7 +8,7 @@ Need to be done:
 
 - Store configuration
 
-This project is a boiler plate of Webpack, VueJS and VueX
+This project is a boiler plate of Webpack 4, VueJS and VueX
 with unit test, e2e tests and linter configured
 
 ## Build Setup

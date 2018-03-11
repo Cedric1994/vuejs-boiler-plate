@@ -78,7 +78,7 @@
     props: {
       menuList: {
         type: Array,
-        default() {
+        default () {
           return [
             {
               text: 'Favoritos',
@@ -99,7 +99,7 @@
                   text: 'Ethernet',
                   icon: 'settings_ethernet',
                   url: ''
-                },
+                }
               ]
             },
             {
@@ -112,13 +112,13 @@
       }
     },
     methods: {
-      toggle() {
+      toggle () {
         this.$refs.leftSidenav.toggle()
       },
-      lockBodyScroll() {
+      lockBodyScroll () {
         document.body.style.overflowY = 'hidden'
       },
-      unlockBodyScroll() {
+      unlockBodyScroll () {
         document.body.style.overflowY = 'auto'
       }
     }
