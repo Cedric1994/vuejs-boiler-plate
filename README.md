@@ -6,7 +6,9 @@
 
 Need to be done:
 
+- Configure chunks with webpack 4
 - Store configuration
+- Fix e2e testing
 
 This project is a boiler plate of Webpack 4, VueJS and VueX
 with unit test, e2e tests and linter configured
@@ -18,7 +20,7 @@ with unit test, e2e tests and linter configured
 yarn install
 
 # serve with hot reload at localhost:8080
-yarn dev
+yarn start
 
 # build for production with minification
 yarn build
