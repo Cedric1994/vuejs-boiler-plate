@@ -28,6 +28,10 @@ const webpackConfig = merge(baseWebpackConfig, {
     filename: utils.assetsPath('js/[name].[chunkhash].js'),
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },
+  optimization: {
+    minimize: true,
+    runtimeChunk: true
+  },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
@@ -47,7 +51,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         }
       }
     }),
-    // generate dist index.html with correct asset hash for caching.
+    // Generate dist index.html with correct asset hash for caching.
     // you can customize output by editing /index.html
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({

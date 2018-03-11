@@ -6,7 +6,6 @@
 
 Need to be done:
 
-- Configure chunks with webpack 4
 - Store configuration
 - Fix e2e testing
 

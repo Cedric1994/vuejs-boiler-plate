@@ -1,7 +1,7 @@
 <template lang="pug">
   .welcome-page
     img(src='../assets/img/logo.png' alt='People')
-    p=("Welcome to VueJS")
+    p=("Welcome to VueJS.")
     range-custom
 </template>
 
@@ -9,7 +9,6 @@
   import RangeCustom from 'shared/RangeCustom'
   // This is only a placeholder, this page doesn't need a script
   export default {
-    data () {},
     components: {
       RangeCustom
     },

@@ -36,7 +36,7 @@ const hotMiddleware = require('webpack-hot-middleware')(compiler, {
   heartbeat: 2000
 })
 // Force page reload when html-webpack-plugin template changes (index.html)
-// Make hot reload slow with webpack 4 + conflict with chuck (wait and see)
+// Breaks HMR with webpack 4, desable for the moment
 // https://github.com/jantimon/html-webpack-plugin/issues/680
 // compiler.plugin('compilation', function (compilation) {
 //   compilation.plugin('html-webpack-plugin-after-emit', function (data, cb) {
