@@ -6,7 +6,6 @@
 
 Need to be done:
 
-- Store configuration
 - Fix e2e testing
 
 This project is a boiler plate of Webpack 4, VueJS and VueX

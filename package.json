@@ -4,6 +4,7 @@
   "description": "VueJS 2018 boiler plate",
   "author": "Cedric Lallemand",
   "private": true,
+  "sideEffects": false,
   "scripts": {
     "start": "node build/dev-server.js",
     "build": "node build/build.js",

@@ -3,24 +3,24 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'
-import { Validator } from 'vee-validate'
+// import { Validator } from 'vee-validate'
 import { sync } from 'vuex-router-sync'
 
 // Import the configuration of your application vue
 import plugins from './config/plugins'
-import directives from './config/directives'
-import validations from './config/validations'
-import theme from './config/theme'
+// import directives from './config/directives'
+// import validations from './config/validations'
+// import theme from './config/theme'
 import configRouter from './config/router'
 import vuexStore from './vuex/store'
 
 plugins(Vue, Vuex, VueRouter) // Declare the plugin we want to use
-directives(Vue) // Rehister all the directive
-theme(Vue)
+// directives(Vue) // Rehister all the directive
+// theme(Vue)
 
 // Directive to automatically validate imports
 // More details: http://vee-validate.logaretm.com/
-validations(Validator)
+// validations(Validator)
 
 const store = new Vuex.Store(vuexStore)
 const router = configRouter(VueRouter)
