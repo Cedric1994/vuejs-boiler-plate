@@ -15,5 +15,6 @@ const app = {
 }
 
 export default (Vue) => {
+  // Register our default theme for vue material
   Vue.material.registerTheme('default', app)
 }

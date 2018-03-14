@@ -19,6 +19,7 @@ plugins(Vue, Vuex, VueRouter) // Declare the plugin we want to use
 // theme(Vue)
 
 // Directive to automatically validate imports
+// Not activated at the moment as it increase bundle size
 // More details: http://vee-validate.logaretm.com/
 // validations(Validator)
 

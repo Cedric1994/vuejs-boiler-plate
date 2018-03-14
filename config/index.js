@@ -21,7 +21,8 @@ module.exports = {
     // Run the build command with an extra argument to
     // View the bundle analyzer report after build finishes:
     // `npm run build --report`
-    // Set to `true` or `false` to always turn it on or off
+    // As yarn doesn't support environment from cli, use the script
+    // build:report to use it with yarn
     bundleAnalyzerReport: process.env.npm_config_report
   },
   dev: {

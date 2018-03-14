@@ -2,9 +2,7 @@
 
 > 2018 - template application
 
-Need to be done:
-
-- e2e testing need to be fixed
+Tests are not working at the moment
 
 This project is a boiler plate of Webpack 4, VueJS and VueX
 
@@ -17,11 +15,11 @@ yarn install
 # serve with hot reload at localhost:8080
 yarn start
 
-# build for production with minification
+# build for production
 yarn build
 
-# build for production and view the bundle analyzer report
-yarn build --report
+# build for production with build analyzer
+yarn build:report
 
 # run unit tests
 yarn unit
