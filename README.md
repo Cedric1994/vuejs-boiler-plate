@@ -2,14 +2,11 @@
 
 > 2018 - template application
 
-**WORK STILL IN PROGRESS**
-
 Need to be done:
 
-- Fix e2e testing
+- e2e testing need to be fixed
 
 This project is a boiler plate of Webpack 4, VueJS and VueX
-with unit test, e2e tests and linter configured
 
 ## Build Setup
 

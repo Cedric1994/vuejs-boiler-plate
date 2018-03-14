@@ -5,11 +5,13 @@ const webpack = require('webpack')
 const config = require('../config')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
+const cleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-// const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
@@ -29,48 +31,37 @@ const webpackConfig = merge(baseWebpackConfig, {
     filename: utils.assetsPath('js/[name].[chunkhash].js'),
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },
-  // optimization: {
-  //   minimizer: [
-  //     new UglifyJsPlugin({
-  //       uglifyOptions: {
-  //         output: {
-  //           comments: false
-  //         },
-  //         compress: {
-  //           unsafe_comps: true,
-  //           properties: true,
-  //           keep_fargs: false,
-  //           pure_getters: true,
-  //           collapse_vars: true,
-  //           unsafe: true,
-  //           warnings: false,
-  //           sequences: true,
-  //           dead_code: true,
-  //           drop_debugger: true,
-  //           comparisons: true,
-  //           conditionals: true,
-  //           evaluate: true,
-  //           booleans: true,
-  //           loops: true,
-  //           unused: true,
-  //           hoist_funs: true,
-  //           if_return: true,
-  //           join_vars: true,
-  //           drop_console: true
-  //         }
-  //       }
-  //     }),
-  //   ]
-  // },
+  optimization: {
+    minimizer: [
+      // Specify options to minify the code
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          compress: {
+            keep_fargs: false,
+            pure_getters: true,
+            warnings: true,
+            sequences: true,
+            hoist_funs: true,
+            drop_console: true
+          }
+        }
+      }),
+    ]
+  },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
       'process.env': env
     }),
+    // Clean dist directory
+    new cleanWebpackPlugin(['dist']),
+    // Display bundle info after build
+    // new BundleAnalyzerPlugin(),
     // extract css into its own file
     new ExtractTextPlugin({
       filename: utils.assetsPath('css/[name].[contenthash].css')
     }),
+    // Configure SplitChunk to seperate node module in a vendor
     new webpack.optimize.SplitChunksPlugin({
       cacheGroups: {
         vendor: {
@@ -81,14 +72,6 @@ const webpackConfig = merge(baseWebpackConfig, {
         }
       }
     }),
-    // new UglifyJsPlugin({
-    //   uglifyOptions: {
-    //     compress: {
-    //       drop_console: true,
-    //     },
-    //     dead_code: true,
-    //   },
-    // }),
     // Compress extracted CSS. We are using this plugin so that possible
     // duplicated CSS from different components can be deduped.
     new OptimizeCSSPlugin({

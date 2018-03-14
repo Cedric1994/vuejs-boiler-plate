@@ -9,9 +9,6 @@
 
 <script type="text/javascript">
   import { mapGetters, mapMutations, mapActions } from 'vuex'
-  import * as _ from 'lodash'
-
-  _.slice([])
 
   export default {
     computed: {
