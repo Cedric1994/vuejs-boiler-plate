@@ -1,9 +1,5 @@
 # Berry - Seed for VueJS
 
-> 2018 - template application
-
-Tests are not working at the moment
-
 This project is a boiler plate of Webpack 4, VueJS and VueX
 
 ## Build Setup

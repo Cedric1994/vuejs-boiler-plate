@@ -1,5 +1,5 @@
-import Home from 'components/Home'
-import NotFound from 'components/NotFound'
+import Home from '@/components/Home'
+import NotFound from '@/components/NotFound'
 /* eslint-disable import/prefer-default-export */
 export const routes = [
   {

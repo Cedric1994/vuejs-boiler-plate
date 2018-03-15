@@ -1,11 +1,9 @@
-import Vue from 'vue'
 import Home from '@/components/Home'
 
 describe('Home.vue', () => {
-  it('should render correct contents', () => {
-    const Constructor = Vue.extend(Home)
-    const vm = new Constructor().$mount()
-    expect(vm.$el.querySelector('.welcome-page p').textContent)
-      .to.equal('Welcome to VueJS')
+  it('should have the right data', () => {
+    expect(Home.data).to.be.a('function')
+    const homeData = Home.data()
+    expect(homeData.testStore).to.equal('Test the store:')
   })
 })

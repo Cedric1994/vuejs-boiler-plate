@@ -2,7 +2,7 @@
   .welcome-page
     img(src='../assets/img/logo.png' alt='People')
     p(v-for="greeting in allGreetings")="{{ greeting }}"
-    div Test the store:
+    div.test {{ testStore }}
       button(v-on:click="removeLastGreeting()") Remove last greeting
       button(v-on:click="addGreeting('This addition used the store!')") Add greeting
 </template>
@@ -12,6 +12,11 @@
   import { types } from '@/vuex/store'
 
   export default {
+    data () {
+      return {
+        testStore: 'Test the store:'
+      }
+    },
     computed: {
       ...mapGetters({
         allGreetings: types.GET_ALL_GREETINGS
