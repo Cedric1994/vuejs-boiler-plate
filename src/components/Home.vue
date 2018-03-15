@@ -9,19 +9,20 @@
 
 <script type="text/javascript">
   import { mapGetters, mapMutations, mapActions } from 'vuex'
+  import { types } from '@/vuex/store'
 
   export default {
     computed: {
       ...mapGetters({
-        allGreetings: 'greetings/getAllGreetings'
+        allGreetings: types.GET_ALL_GREETINGS
       })
     },
     methods: {
       ...mapMutations({
-        removeLastGreeting: 'greetings/removeLastGreeting'
+        removeLastGreeting: types.REMOVE_LAST_GREETING
       }),
       ...mapActions({
-        addGreeting: 'greetings/addGreeting'
+        addGreeting: types.ADD_GREETING
       })
     }
   }

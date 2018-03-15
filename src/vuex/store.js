@@ -11,3 +11,15 @@ export default {
   },
   strict: true // throw error if state mutated outside mutation handlers
 }
+
+// All types use to interact with the store are defined here
+export const types = {
+  // Getters
+  GET_ALL_GREETINGS: 'greetings/getAllGreetings',
+
+  // mutations
+  REMOVE_LAST_GREETING: 'greetings/removeLastGreeting',
+
+  // Actions
+  ADD_GREETING: 'greetings/addGreeting'
+}
