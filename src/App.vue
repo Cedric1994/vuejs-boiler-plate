@@ -15,8 +15,9 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   @import './assets/css/main.css';
+  @import './styles/lightTheme';
 
   .slide-fade-enter-active {
     transition: all .2s ease;
