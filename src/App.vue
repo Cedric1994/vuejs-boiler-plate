@@ -1,6 +1,5 @@
 <template>
-  <div
-    id="app">
+  <div id="app">
     <transition
       name="slide-fade"
       mode="out-in">
@@ -10,14 +9,18 @@
 </template>
 
 <script>
+  import { types } from '@/vuex/store'
+
   export default {
-    name: 'app'
+    name: 'app',
+    created () {
+      this.$store.dispatch(types.USE_DEFAULT_THEME)
+    }
   }
 </script>
 
 <style lang="scss">
-  @import './assets/css/main.css';
-  @import './styles/lightTheme';
+  @import './assets/css/roboto-fonts.css';
 
   .slide-fade-enter-active {
     transition: all .2s ease;
