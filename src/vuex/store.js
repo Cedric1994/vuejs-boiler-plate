@@ -1,4 +1,5 @@
 import greetings from './modules/greetings'
+import style from './modules/style'
 
 // A Vuex instance is created by combining the state, the actions,
 // and the mutations. Because the actions and mutations are just
@@ -7,7 +8,8 @@ import greetings from './modules/greetings'
 
 export default {
   modules: {
-    greetings
+    greetings,
+    style
   },
   strict: true // throw error if state mutated outside mutation handlers
 }
@@ -16,10 +18,14 @@ export default {
 export const types = {
   // Getters
   GET_ALL_GREETINGS: 'greetings/getAllGreetings',
+  GET_CURRENT_THEME: 'style/getCurrentTheme',
+  IS_DEFAULT_THEME_IN_USE: 'style/isDefaultThemeInUse',
 
   // mutations
   REMOVE_LAST_GREETING: 'greetings/removeLastGreeting',
 
   // Actions
-  ADD_GREETING: 'greetings/addGreeting'
+  ADD_GREETING: 'greetings/addGreeting',
+  USE_DEFAULT_THEME: 'style/useDefaultTheme',
+  USE_DARK_THEME: 'style/useDarkTheme'
 }
