@@ -2,6 +2,12 @@
 
 This project is a boiler plate of Webpack 4, VueJS and VueX
 
+TODO:
+
+- replace ExtractTextWebpackPlugin by mini-css-extract-plugin once HMR supported
+  -> https://github.com/webpack-contrib/mini-css-extract-plugin
+  -> https://github.com/webpack-contrib/extract-text-webpack-plugin/issues/763
+
 ## Build Setup
 
 ``` bash

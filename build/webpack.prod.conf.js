@@ -52,8 +52,9 @@ const webpackConfig = merge(baseWebpackConfig, {
       'process.env': env
     }),
     // Extract css into its own file
+    // TODO: replace this plugin by mini-css-extract-plugin once HMR supported
     new ExtractTextPlugin({
-      filename: utils.assetsPath('css/[name].[contenthash].css')
+      filename: utils.assetsPath('css/[name].[hash].css')
     }),
     // Configure SplitChunk to seperate node module in a vendor
     new webpack.optimize.SplitChunksPlugin({
